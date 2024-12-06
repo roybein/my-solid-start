@@ -1,10 +1,3 @@
-import { Title } from "@solidjs/meta";
+import About from '@/fragments/About'
 
-export default function Home() {
-  return (
-    <main>
-      <Title>About</Title>
-      <h1>About</h1>
-    </main>
-  );
-}
+export default About;
