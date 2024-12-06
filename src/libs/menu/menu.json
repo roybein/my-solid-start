@@ -1,0 +1,60 @@
+{
+    "appetizers": [
+        {
+            "name": "Classic Caesar Salad",
+            "description": "Fresh romaine lettuce, crispy croutons, shaved Parmesan cheese, tossed in a creamy Caesar dressing.",
+            "price": 8.99
+        },
+        {
+            "name": "Spinach and Artichoke Dip",
+            "description": "A warm and creamy blend of spinach, artichoke hearts, cream cheese, and mozzarella, served with tortilla chips.",
+            "price": 9.50
+        }
+    ],
+    "main_courses": [
+        {
+            "name": "Grilled Steak",
+            "description": "A juicy 8-ounce steak, grilled to your preference, served with mashed potatoes and seasonal vegetables.",
+            "price": 22.99
+        },
+        {
+            "name": "Seafood Pasta",
+            "description": "Linguine pasta tossed with a rich tomato cream sauce, shrimp, mussels, and clams.",
+            "price": 19.99
+        },
+        {
+            "name": "Vegetarian Lasagna",
+            "description": "Layers of fresh vegetables, ricotta cheese, and marinara sauce, baked to perfection with a cheesy crust.",
+            "price": 18.50
+        }
+    ],
+    "desserts": [
+        {
+            "name": "New York Cheesecake",
+            "description": "Creamy and rich cheesecake with a graham cracker crust, topped with fresh berries.",
+            "price": 7.50
+        },
+        {
+            "name": "Chocolate Lava Cake",
+            "description": "A warm, gooey chocolate cake with a molten center, served with vanilla ice cream.",
+            "price": 8.00
+        }
+    ],
+    "beverages": [
+        {
+            "name": "Iced Tea",
+            "description": "Refreshingly sweetened iced tea, perfect for quenching your thirst.",
+            "price": 2.99
+        },
+        {
+            "name": "Freshly Squeezed Lemonade",
+            "description": "Made from real lemons, tangy and sweet, served over ice.",
+            "price": 3.50
+        },
+        {
+            "name": "Cappuccino",
+            "description": "Rich espresso with steamed milk and a layer of frothy foam.",
+            "price": 4.50
+        }
+    ]
+}
