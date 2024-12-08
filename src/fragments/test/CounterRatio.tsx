@@ -1,5 +1,5 @@
 import { TextField, TextFieldRoot, TextFieldLabel } from "@/components/shadcn/textfield";
-import { getCounterRatio, setCounterRatio } from "@/states/counter";
+import { getCounterRatio, setCounterRatio } from "@/states/test/counter";
 
 function CounterRatio() {
   return (

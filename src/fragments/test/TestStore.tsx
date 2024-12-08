@@ -1,4 +1,4 @@
-import * as storeTasks from '@/states/tasks'
+import * as storeTasks from '@/states/test/tasks'
 import { TextFieldRoot, TextField } from '@/components/shadcn/textfield'
 import { Button } from '@/components/shadcn/button'
 import { Checkbox, CheckboxControl, CheckboxLabel } from '@/components/shadcn/checkbox'
@@ -15,7 +15,7 @@ const TestStore = () => {
   const addTask = (text: string) => {
     console.log('addTask', text)
 
-    // storeTasks.setState((state) => ({
+    // storeTasks.set((state) => ({
     //   tasks: [
     //     ...state.tasks,
     //     {
@@ -27,7 +27,7 @@ const TestStore = () => {
     // }))
 
     // use produce instead
-    storeTasks.setState(produce((state) => {
+    storeTasks.set(produce((state) => {
       state.tasks.push({
         id: state.tasks.length,
         text,
@@ -37,15 +37,15 @@ const TestStore = () => {
   }
 
   const removeTask = (id: number) => {
-    storeTasks.setState({
-      tasks: [...storeTasks.state.tasks].filter(t => t.id !== id),
+    storeTasks.set({
+      tasks: [...storeTasks.get().tasks].filter(t => t.id !== id),
     })
   } 
 
   const toggleTask = (id: number) => {
     console.log('toggleTask', id)
 
-    // storeTasks.setState((state) => {
+    // storeTasks.set((state) => {
     //   const taskNew = {...state.tasks[id]}
     //   taskNew.isDone = !taskNew.isDone
 
@@ -61,24 +61,24 @@ const TestStore = () => {
     // })
 
     // use produce instead
-    storeTasks.setState(produce((state) => {
+    storeTasks.set(produce((state) => {
       state.tasks[id].isDone = !state.tasks[id].isDone
     }))
   }
 
   createEffect(() => {
-    console.log('watch tasks[2] isDone', storeTasks.state.tasks[2]?.isDone)
+    console.log('watch tasks[2] isDone', storeTasks.get().tasks[2]?.isDone)
   })
 
   const taskTotal = createMemo(() => {
-    const total = storeTasks.state.tasks.length
+    const total = storeTasks.get().tasks.length
     console.log('memo taskTotal', total)
 
     return total
   })
 
   const taskDone = createMemo(() => {
-    const done = storeTasks.state.tasks.filter(task => task.isDone).length
+    const done = storeTasks.get().tasks.filter(task => task.isDone).length
     console.log('memo taskDone', done)
 
     return done 
@@ -87,7 +87,7 @@ const TestStore = () => {
   return (
     <div class="w-full p-8 flex flex-col gap-y-4">
       <div class="font-bold text-2xl">
-        {storeTasks.state.title}
+        {storeTasks.get().title}
       </div>
       <div>
         <div>
@@ -119,7 +119,7 @@ const TestStore = () => {
         Add Task
       </Button>
       <div class="flex flex-col gap-y-4">
-        <For each={storeTasks.state.tasks}>
+        <For each={storeTasks.get().tasks}>
           {
             (task) => (
               <div class="flex flex-row justify-between gap-x-4">
@@ -148,7 +148,7 @@ const TestStore = () => {
       </div>
       <div>
         <pre>
-          {JSON.stringify(storeTasks.state, null, 2)}
+          {JSON.stringify(storeTasks.get(), null, 2)}
         </pre>
       </div>
     </div>

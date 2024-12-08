@@ -1,4 +1,4 @@
-import { getMenuInfo } from '@/states/menu'
+import { getMenuInfo } from '@/states/test/menu'
 
 const MenuDisplay = () => {
   return (

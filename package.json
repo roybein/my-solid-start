@@ -1,5 +1,5 @@
 {
-  "name": "boboji-web",
+  "name": "my-solid-start",
   "type": "module",
   "scripts": {
     "dev": "vinxi dev",

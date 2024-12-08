@@ -1,4 +1,4 @@
-import { getCounter, setCounter } from '@/states/counter';
+import { getCounter, setCounter } from '@/states/test/counter';
 
 const CounterDisplay = () => {
   return (

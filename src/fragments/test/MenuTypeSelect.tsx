@@ -4,7 +4,7 @@ import {
 import {
   getMenuType, setMenuType, getMenuOptions,
   fetchMenuOptions, fetchMenuInfo,
-} from '@/states/menu';
+} from '@/states/test/menu';
 import {
   FaSolidSort as SortIcon, FaSolidCheck as CheckIcon
 } from 'solid-icons/fa'

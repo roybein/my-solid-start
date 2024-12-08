@@ -1,4 +1,4 @@
-import { getCounter, getCounterRatio, setCounter } from '@/states/counter';
+import { getCounter, getCounterRatio, setCounter } from '@/states/test/counter';
 import { Button } from '@/components/shadcn/button'
 
 const CounterButton = () => {

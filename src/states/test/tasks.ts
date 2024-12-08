@@ -11,12 +11,15 @@ interface Task {
   isDone: boolean,
 } 
 
-const [state, setState] = createStore<StoreTasks>({
+const [store, setStore] = createStore<StoreTasks>({
   title: 'My Tasks',
   tasks: [],
 })
 
+const get = () => store
+const set = setStore
+
 export {
-  state,
-  setState
+  get,
+  set,
 }
