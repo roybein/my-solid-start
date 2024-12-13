@@ -1,4 +1,4 @@
-# Node-Runner
+# my-solid-start
 
 the project is powered by [`solid-start`](https://start.solidjs.com);
 
